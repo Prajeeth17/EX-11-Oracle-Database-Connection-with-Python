@@ -69,7 +69,8 @@ except cx_Oracle.DatabaseError as er:
 else:
 	try:
 		cur = con.cursor()
-		data = [[10007, 'Vikram', 48000.0], [10008, 'Sunil', 65000.1], [10009, 'Sameer', 75000.0]]
+		data = [[10007, 'Vikram', 48000.0], [10008, 'Sunil', 65000.1],
+			[10009, 'Sameer', 75000.0]]
 		cur = con.cursor()
 		# Inserting multiple records into employee table
 		# (:1,:2,:3) are place holders. They pick data from a list supplied as argument
