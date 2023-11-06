@@ -73,7 +73,8 @@ else:
 			[10009, 'Sameer', 75000.0]]
 		cur = con.cursor()
 		# Inserting multiple records into employee table
-		# (:1,:2,:3) are place holders.They pick data from a list supplied as argument
+		# (:1,:2,:3) are place holders.They pick data
+		  from a list supplied as argument
 		cur.executemany('insert into employee values(:1,:2,:3)', data)
 	except cx_Oracle.DatabaseError as er:
 		print('There is an error in Oracle database:', er)
@@ -102,7 +103,7 @@ except cx_Oracle.DatabaseError as er:
 else:
 	try:
 		cur = con.cursor()
-		cur.execute('select * from employee where salary > :sal', {'sal': 50000})
+		cur.execute('select * from employee where salary > :sal',{'sal': 50000})
 		rows = cur.fetchall()
 		print(rows)
 	except cx_Oracle.DatabaseError as er:
