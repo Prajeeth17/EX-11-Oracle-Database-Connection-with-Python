@@ -103,7 +103,8 @@ except cx_Oracle.DatabaseError as er:
 else:
 	try:
 		cur = con.cursor()
-		cur.execute('select * from employee where salary > :sal',{'sal': 50000})
+		cur.execute('select * from employee
+		where salary > :sal',{'sal': 50000})
 		rows = cur.fetchall()
 		print(rows)
 	except cx_Oracle.DatabaseError as er:
