@@ -8,14 +8,15 @@ To connect Oracle database with Python using cx_Oracle module.
    Now Establish a connection between the Python program and Oracle database by using connect() function. 
 ```python
 con = cx_Oracle.connect('username/password@localhost')
-cursor(): To execute a SQL query and to provide results some special object is required that is nothing but
-	  cursor() object.
+cursor(): To execute a SQL query and to provide results some special object is
+	  required that is nothing but cursor() object.
 cursor = con.cursor()
 ```
 3.To Execute **execute/executemany method:**
 ```python
 cursor.execute(sqlquery) - - - -> to execute a single query. 
-cursor.executemany(sqlqueries) - - - -> to execute a single query with multiple bind variables/place holders.
+cursor.executemany(sqlqueries) - - - -> to execute a single query with multiple bind
+					variables/place holders.
 ```
 4. To Commit **commit():**
    For DML(Data Manipulation Language) queries that comprise operations like update, insert, delete. We need to commit() then only the result reflects in the database.
@@ -42,7 +43,7 @@ try:
 	cursor = con.cursor()
 	# Creating a table employee
 	cursor.execute(
-	"create table employee(empid integer primary key, name varchar2(30), salary number(10, 2))")
+        "create table employee(empid integer primary key,name varchar2(30),salary number(10, 2))")
 	print("Table Created successfully")
 except cx_Oracle.DatabaseError as e:
 	print("There is a problem with Oracle", e)
