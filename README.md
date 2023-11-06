@@ -41,7 +41,7 @@ try:
 	cursor = con.cursor()
 	# Creating a table employee
 	cursor.execute(
-		"create table employee(empid integer primary key, name varchar2(30), salary number(10, 2))")
+	"create table employee(empid integer primary key, name varchar2(30), salary number(10, 2))")
 	print("Table Created successfully")
 except cx_Oracle.DatabaseError as e:
 	print("There is a problem with Oracle", e)
