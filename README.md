@@ -8,7 +8,8 @@ To connect Oracle database with Python using cx_Oracle module.
    Now Establish a connection between the Python program and Oracle database by using connect() function. 
 ```python
 con = cx_Oracle.connect('username/password@localhost')
-cursor(): To execute a SQL query and to provide results some special object is required that is nothing but cursor() object.
+cursor(): To execute a SQL query and to provide results some special object is required that is nothing but
+	  cursor() object.
 cursor = con.cursor()
 ```
 3.To Execute **execute/executemany method:**
